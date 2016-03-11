@@ -8,9 +8,9 @@
  *
  * @author Lalu Oldi Alfitra
  */
-public class ManagerProyek extends Orang{
-    
+public class ManagerProyek extends Orang {
     private Proyek[] proyek = new Proyek[5];
+    private Programmer program ;
     private String idMP;
     private String deadline;
     
@@ -18,9 +18,9 @@ public class ManagerProyek extends Orang{
         super(Nama, TanggalLahir, NoHP, JenisKelamin);
     }
     
-    public void createProyek(String deadline) {
+    public void createProyek(String deadline, Programmer program, Tugas tugas,String judulProyek) {
         int i = 0;
-        this.proyek[i] = new Proyek(judul, deadline);
+        this.proyek[i] = new Proyek(program, tugas, judulProyek);
         i++;
     }
     
@@ -33,28 +33,26 @@ public class ManagerProyek extends Orang{
     }
     
     public Proyek getProyek(int index) {
-        return proyek;
+        return proyek[index];
     }
     
-    public void deleteProyek(proyek P, int i) {
-        if((i>P.length) && (i<0)) {
+    public void deleteProyek(Proyek P, int i) {
+        /*if((i>P.length) && (i<0)) {
             P[i] = null;
             System.out.println("Proyek ke-"+(i+1)+" telah dihapus");
         } else {
             System.out.println("Proyek tidak dapat dihapus");
-        }
-    }
-    
-    /**
-     *
-     */
-    @Override
+        }*/
+        this.proyek[i] = null;
+    };
     public void Display() {
         System.out.println("ID Manager Proyek: "+getIdMP());
         System.out.println("Nama: " + super.getNama());
         System.out.println("Tanggal Lahir: " + super.getTanggalLahir());
         System.out.println("No HP: " + super.getNoHP());
         System.out.println("Jenis Kelamin: " + super.getJenisKelamin());
-        System.out.println("Proyek: " + getProyek());
+        int i = 0;
+        System.out.println("Proyek: " + getProyek(i));
+        i++;
     }
 }
