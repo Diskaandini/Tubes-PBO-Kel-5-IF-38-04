@@ -11,27 +11,30 @@
 public abstract class Orang {
     private String Nama;
     private String TanggalLahir;
-    private double NoHP;
+    private String NoHP;
     private String JenisKelamin;
+    String id;
 	
-    public Orang (String Nama, String TanggalLahir, double NoHP, String JenisKelamin){
+    public Orang (String id,String Nama, String TanggalLahir,String NoHP, String JenisKelamin){
+        this.id = id;
         this.Nama = Nama;
         this.TanggalLahir = TanggalLahir;
         this.NoHP = NoHP;
         this.JenisKelamin = JenisKelamin;
     }
-    
-    public Orang(String Nama){
-        this.Nama= Nama;
+    public void setId(String id){
+        this.id = id;
     }
-    
+    public String getId(){
+        return id;
+    }
     public void setNama (String nama){
         this.Nama = Nama;
     }
     public void setTanggalLahir(String TanggalLahir){
         this.TanggalLahir = TanggalLahir;
     }
-    public void setNoHP (double NoHP){
+    public void setNoHP (String NoHP){
         this.NoHP = NoHP;
     }
     public void setJenisKelamin(String JenisKelamin){
@@ -43,12 +46,12 @@ public abstract class Orang {
     public String getTanggalLahir(){
         return TanggalLahir;
     }
-    public double getNoHP(){
+    public String getNoHP(){
         return NoHP;
     }
     public String getJenisKelamin(){
         return JenisKelamin;
     }
     public void Display(){
-      }
+    }
 }

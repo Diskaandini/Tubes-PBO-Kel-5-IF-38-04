@@ -9,22 +9,41 @@
  * @author Lalu Oldi Alfitra
  */
 public class Tugas {
-    private Programmer pelaksana;
-    private String JudulTugas;
-    private boolean Status;
-
-    public Tugas(Programmer pelaksana, String JudulTugas, boolean Status) {
-        this.pelaksana = pelaksana;
-        this.JudulTugas = JudulTugas;
-        this.Status = Status;
+    private Programmer programmer;
+    private ManagerProyek Manager;
+    private String judul,deskripsi;
+    private boolean status;
+    
+    public Tugas(Programmer pro, String judul,String deskripsi, boolean status){
+        setProgrammer(pro);
+        setJudul(judul);
+        setDeskripsi(deskripsi);
+        setStatus(status);
     }
-
-    public Programmer getPelaksana() {
-        return pelaksana;
+    public void setProgrammer(Programmer pro){
+        this.programmer = pro;
     }
-
-    public void setPelaksana(Programmer pelaksana) {
-        this.pelaksana = pelaksana;
+    public void setJudul(String judul){
+        this.judul=judul;
     }
+    public void setDeskripsi(String deskripsi){
+        this.deskripsi = deskripsi;
+    }
+    public void setStatus(boolean status){
+        this.status = status;
+    }
+    public Programmer getPro(){
+        return programmer;
+    }
+    public String getJudultugas(){
+        return this.judul;
+    }
+    public String getDeskripsi(){
+        return this.deskripsi;
+    }
+    public boolean getStatus(){
+        return this.status;
+    }
+    
     
 }

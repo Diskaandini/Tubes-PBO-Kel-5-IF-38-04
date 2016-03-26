@@ -9,41 +9,71 @@
  * @author USER
  */
 public class Proyek {
-    private Programmer[] programmer = new Programmer[2];
-    private Tugas[] tugas = new Tugas[5];
-    private String judulProyek;
-    int length;
+    private Programmer[] programmer = new Programmer[10];
+    private ManagerProyek Manager;
+    private String id,judul,deadline;
+    private Tugas[] tugas = new Tugas[10] ;
     
-    public Proyek(Programmer program, Tugas tugas,String judulProyek){
-        int i=0;
-        this.programmer[i] = program;
-        this.tugas[i] = tugas;
-        i++;
-        this.judulProyek = judulProyek;
-    };
-    public void addProgrammer(int index, String nama,String TanggalLahir, double NoHP, String JenisKelamin){
-        int i=0;
-        this.programmer[i] = new Programmer(nama, TanggalLahir, NoHP, JenisKelamin);
-        i++;
-    };
-    public Programmer getProgrammer(int index){
-       return this.programmer[index];
-    };
+     private int i=0;
+     
+     public Proyek(ManagerProyek m,String id,String judul,String deadline){
+         setMP(m);
+         setId(id);
+         setJudul(judul);
+         setDeadline(deadline);
+     }
+     public void setMP(ManagerProyek m){
+         this.Manager = m;
+     }
+     public void setId(String id){
+         this.id = id;
+     }
+     public void setJudul(String judul){
+         this.judul = judul;
+     }
+     public void setDeadline(String deadline){
+         this.deadline = deadline;
+     }
+     public ManagerProyek getMP(){
+         return Manager;
+     }
+    public String getID(){
+        return this.id;
+    }
+    public String getJudul(){
+        return this.judul;
+    }
+    public String getDeadline(){
+        return this.deadline;
+    }
+     public void addProgrammer(String id,String Nama, String TanggalLahir, String NoHP, String JenisKelamin){
+         if(i<10){
+         programmer[i] = new Programmer(id,Nama, TanggalLahir, NoHP, JenisKelamin);
+         i++;
+         }
+     }
+     public Programmer getProgrammer(int index){
+         return programmer[index];
+     }
+     public void createTugas(Programmer[] pro,String judul, String deskripsi, boolean status){
+         if(i<10){
+            tugas[i]=new Tugas(pro[i],judul,deskripsi,status);
+            i++;
+	}
+     }
+     public void removeTugas(int index){
+      tugas[index] = null;
+        for (int a=0;a<5;a++) {
+            if (tugas[a] == null) {
+                while(a<(5-a)){
+                    tugas[a] = tugas[a+1];
+                    a++;
+                }                
+            }
+        }
+     }
+     public Tugas getTugas(int index){
+         return tugas[index];
+     }
     
-    public void createTugas(Tugas t, Programmer pelaksana, String JudulTugas, boolean Status){
-        int i = 0;
-        this.tugas[i] = new Tugas(pelaksana, judulProyek, true);
-        i++;
-    };
-    public void removeProgrammer(int index){
-        this.programmer[index]= null;
-    };
-    
-    public Tugas getTugas(int index){
-        return this.tugas[index];
-    };
-    
-    public void deleteTugas(int index){
-        this.tugas[index] = null;
-    };
-}    
+}
