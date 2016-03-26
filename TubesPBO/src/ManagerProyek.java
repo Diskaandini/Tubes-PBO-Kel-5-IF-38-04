@@ -45,6 +45,7 @@ public class ManagerProyek extends Orang {
         }*/
         this.proyek[i] = null;
     };
+    
     public void Display() {
         System.out.println("ID Manager Proyek: "+getIdMP());
         System.out.println("Nama: " + super.getNama());

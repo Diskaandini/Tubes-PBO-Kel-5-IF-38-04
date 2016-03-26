@@ -50,5 +50,5 @@ public abstract class Orang {
         return JenisKelamin;
     }
     public void Display(){
-    }
+      }
 }

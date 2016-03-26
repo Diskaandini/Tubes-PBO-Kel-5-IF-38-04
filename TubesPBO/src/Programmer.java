@@ -20,6 +20,19 @@ public class Programmer extends Orang {
     public long getId(){
         return idProgrammer;
     }
+    public void status (boolean status){
+        if ( status = true ) {
+          System.out.println("Tugas Selesai");
+        }
+        else {
+            System.out.println("Tugas belum selesai");
+        }
+    }    
+    public boolean changeStatus(boolean status){
+        return status;
+    }
+    
+//    
     
     @Override
     public void Display() {

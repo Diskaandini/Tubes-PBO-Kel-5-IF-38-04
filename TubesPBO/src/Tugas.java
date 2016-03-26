@@ -27,7 +27,4 @@ public class Tugas {
         this.pelaksana = pelaksana;
     }
     
-    public void Display() {
-        System.out.println("Pelaksana: "+getPelaksana());
-    }
 }

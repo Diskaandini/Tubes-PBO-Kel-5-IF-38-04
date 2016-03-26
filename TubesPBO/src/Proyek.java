@@ -12,6 +12,7 @@ public class Proyek {
     private Programmer[] programmer = new Programmer[2];
     private Tugas[] tugas = new Tugas[5];
     private String judulProyek;
+    int length;
     
     public Proyek(Programmer program, Tugas tugas,String judulProyek){
         int i=0;
@@ -37,11 +38,12 @@ public class Proyek {
     public void removeProgrammer(int index){
         this.programmer[index]= null;
     };
+    
     public Tugas getTugas(int index){
         return this.tugas[index];
     };
+    
     public void deleteTugas(int index){
         this.tugas[index] = null;
-     
     };
 }    
