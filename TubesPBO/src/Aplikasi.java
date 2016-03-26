@@ -142,6 +142,7 @@ public class Aplikasi {
     
     public static void main(String[] args) {
       Aplikasi app = new Aplikasi();
+      app.login();
       app.menu();
     }
 }
