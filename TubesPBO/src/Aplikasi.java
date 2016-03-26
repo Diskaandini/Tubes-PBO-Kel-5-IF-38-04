@@ -74,9 +74,11 @@ public class Aplikasi {
         Scanner input = new Scanner(System.in);
         System.out.print("ID    : ");String id = input.nextLine();
         System.out.print("Sandi : ");String sandi = input.nextLine();
+        
         if(id.equals(this.id) && sandi.equals(this.sandi)){
             menu();
         }else
+            System.out.println("ID dan Sandi salah");
             login();
        
     }
