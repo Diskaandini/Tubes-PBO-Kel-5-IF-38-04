@@ -6,13 +6,20 @@
 package Controller;
 
 import Model.Applikasi;
+import View.jUpdateProyek;
 
 /**
  *
- * @author USER
+ * @author VELIA
  */
-public class ControllerLogout {
+class controllerUpdProy {
+    jUpdateProyek update_proy;
     Applikasi a;
-    
+
+    public controllerUpdProy(Applikasi a) {
+        update_proy = new jUpdateProyek();
+        update_proy.setVisible(true);
+        this.a =a;
+    }
     
 }

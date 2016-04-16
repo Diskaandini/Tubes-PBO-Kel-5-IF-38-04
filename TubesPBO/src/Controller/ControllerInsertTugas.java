@@ -6,13 +6,21 @@
 package Controller;
 
 import Model.Applikasi;
+import View.jInsertTugas;
+
 
 /**
  *
- * @author USER
+ * @author VELIA
  */
-public class ControllerLogout {
+public class ControllerInsertTugas {
+    jInsertTugas insert_tugas;
     Applikasi a;
     
+    public ControllerInsertTugas() {
+    insert_tugas = new jInsertTugas();
+    insert_tugas.setVisible(true);
+    this.a =a;
+}
     
 }

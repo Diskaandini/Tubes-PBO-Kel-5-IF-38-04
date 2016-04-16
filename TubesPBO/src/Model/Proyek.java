@@ -1,3 +1,5 @@
+package Model;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,20 +14,26 @@ public class Proyek {
 
     private Programmer[] programmer = new Programmer[10];
 //    private ManagerProyek Manager;
-    private String id, judul, deadline;
+    private String id, judul;
     private Tugas[] tugas = new Tugas[10];
 
     private int i = 0;
 
-    public Proyek(String id, String judul, String deadline) {
+    public Proyek() {
 //         setMP(m);
         setId(id);
         setJudul(judul);
-        setDeadline(deadline);
+       
+    }
+    public Proyek(String id, String judul){
+        setId(id);
+        setJudul(judul);
     }
 //     public void setMP(ManagerProyek m){
 //         this.Manager = m;
 //     }
+
+   
 
     public void setId(String id) {
         this.id = id;
@@ -35,9 +43,7 @@ public class Proyek {
         this.judul = judul;
     }
 
-    public void setDeadline(String deadline) {
-        this.deadline = deadline;
-    }
+ 
 //     public ManagerProyek getMP(){
 //         return Manager;
 //     }
@@ -50,9 +56,7 @@ public class Proyek {
         return this.judul;
     }
 
-    public String getDeadline() {
-        return this.deadline;
-    }
+
 
     public void addProgrammer(String id, String Nama, String TanggalLahir, String NoHP, String JenisKelamin) {
         if (i < 10) {

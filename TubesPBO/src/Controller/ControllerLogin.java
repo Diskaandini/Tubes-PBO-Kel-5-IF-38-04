@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import Model.Applikasi;
 import View.jLogin;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,8 +22,9 @@ import javax.swing.JOptionPane;
 public class ControllerLogin implements ActionListener{
     jLogin login;
     database db;
+    Applikasi a;
     
-    public ControllerLogin() {
+    public ControllerLogin(Applikasi a) {
         db = new database();
         db.connect();
         
@@ -30,7 +32,8 @@ public class ControllerLogin implements ActionListener{
         
         login.setVisible(true);
         login.getBtnLogin().addActionListener(this);
-        
+        this.a =a;
+       
     }
 
     
@@ -44,7 +47,7 @@ public class ControllerLogin implements ActionListener{
             String pass = login.getjPassword().getText();
             if (usrN.equals("admin") && pass.equals("admin")){
                 login.dispose();
-                new controllerJMenu();
+                new ControllerJMenu(a);
                 JOptionPane.showMessageDialog(null, "Anda berhasil login");
             } else {
                 JOptionPane.showMessageDialog(null, "Anda gagal login");
@@ -57,7 +60,7 @@ public class ControllerLogin implements ActionListener{
 //                while(rs.next()){
 //                    if(pass.equals(rs.getString("password"))){
 //                        if(rs.getString("role").equals("programmer")){
-//                            controllerJMenu cmenu = new controllerJMenu("programmer");
+//                            ControllerJMenu cmenu = new ControllerJMenu("programmer");
 //                        }
 //                    }
 //                }

@@ -18,6 +18,7 @@ public class jDaftarProyek extends javax.swing.JFrame {
         initComponents();
     }
 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -158,4 +159,30 @@ public class jDaftarProyek extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableProyek;
     // End of variables declaration//GEN-END:variables
+
+    
+
+    public javax.swing.JButton getBtnDeleteProyek() {
+        return btnDeleteProyek;
+    }
+
+    public void setBtnDeleteProyek(javax.swing.JButton btnDeleteProyek) {
+        this.btnDeleteProyek = btnDeleteProyek;
+    }
+
+    public javax.swing.JButton getBtnInsertProyek() {
+        return btnInsertProyek;
+    }
+
+    public void setBtnInsertProyek(javax.swing.JButton btnInsertProyek) {
+        this.btnInsertProyek = btnInsertProyek;
+    }
+
+    public javax.swing.JButton getBtnUpdateProyek() {
+        return btnUpdateProyek;
+    }
+
+    public void setBtnUpdateProyek(javax.swing.JButton btnUpdateProyek) {
+        this.btnUpdateProyek = btnUpdateProyek;
+    }
 }

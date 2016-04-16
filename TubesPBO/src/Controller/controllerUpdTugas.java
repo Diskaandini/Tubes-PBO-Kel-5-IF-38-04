@@ -5,14 +5,22 @@
  */
 package Controller;
 
+
 import Model.Applikasi;
+import View.jUpdateTugas;
 
 /**
  *
- * @author USER
+ * @author VELIA
  */
-public class ControllerLogout {
+class controllerUpdTugas {
+    jUpdateTugas update_tugas;
     Applikasi a;
-    
+
+    public controllerUpdTugas(Applikasi a) {
+        update_tugas = new jUpdateTugas();
+        update_tugas.setVisible(true);
+        this.a =a;
+    }
     
 }

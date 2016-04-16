@@ -1,3 +1,5 @@
+package Model;
+
 
 import Controller.ControllerLogin;
 import Controller.database;
@@ -26,7 +28,7 @@ public class driver {
 //            System.out.println(rs.getString(1));
 //        }
 //        System.out.println(rs.getString("username"));
-
-            ControllerLogin c = new ControllerLogin();
+            Applikasi a = new Applikasi();
+            ControllerLogin c = new ControllerLogin(a);
     }
 }

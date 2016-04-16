@@ -6,13 +6,21 @@
 package Controller;
 
 import Model.Applikasi;
+import View.jInsertMP;
 
 /**
  *
- * @author USER
+ * @author VELIA
  */
-public class ControllerLogout {
+class ControllerInsertMP {
+
+    private jInsertMP view;
     Applikasi a;
     
+    public ControllerInsertMP(Applikasi a) {
+        view = new jInsertMP();
+        view.setVisible(true);
+        this.a =a;
+    }
     
 }

@@ -9,10 +9,13 @@ import Model.Applikasi;
 
 /**
  *
- * @author USER
+ * @author VELIA
  */
-public class ControllerLogout {
-    Applikasi a;
-    
+class ControllerDelMP {
+    Applikasi a ;
+
+    public ControllerDelMP(Applikasi a) {
+        this.a =a;
+    }
     
 }
