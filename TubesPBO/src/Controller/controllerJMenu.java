@@ -5,7 +5,8 @@
  */
 package Controller;
 
-import View.jMenu;
+import View.MenuManagerProyek;
+import View.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,36 +14,59 @@ import java.awt.event.ActionListener;
  *
  * @author USER
  */
-public class controllerJMenu implements ActionListener{
-    jMenu menu;
-    
+public class controllerJMenu implements ActionListener {
 
-    String status="";
+    jMenu menu;
+    jLogin login;
+    MenuManagerProyek mp;
     
-    public controllerJMenu(String status) {
+    
+    
+    controllerJMenu cm;
+   
+//    private Object jMP;
+//    private Object jProyek;
+//    private Object jTugas;
+//    private Object jProgrammer;
+
+    public controllerJMenu() {
         menu = new jMenu();
+        mp= new MenuManagerProyek();
+        login = new jLogin();
         menu.setVisible(true);
-        this.status = status;
-        menu.getmnLogout().addActionListener(this);
-        menu.getmnProyek().addActionListener(this);
-        menu.getmnTugas().addActionListener(this);
-        if (status.equals("programmer")) {
-            menu.getmnProyek().setEnabled(false);
-        }   
+        menu.getjMP().addActionListener(this);
+        menu.getjProyek().addActionListener(this);
+        menu.getjTugas().addActionListener(this);
+        menu.getjProgrammer().addActionListener(this);
+        
+        
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Object obj = new Object();
-        if(obj.equals(menu.getmnProyek())){
-            ControllerProyek proy = new ControllerProyek();
+        Object x =  e.getSource() ;
+        if (x.equals(menu.getjMP())){
+            System.out.println("a");
+            //new ControllerMProyek();
+            mp.setVisible(true);
+            menu.dispose();
+        } 
+        else if (x.equals(menu.getjProyek())){
+            new ControllerProyek();
+        }       
+        else if(x.equals(menu.getjTugas())){
+            new ControllerTugas();
         }
-        else if(obj.equals(menu.getmnTugas())){
-            ControllerTugas tugas = new ControllerTugas();
+        else if(x.equals(menu.getjProgrammer())){
+            new ControllerProgrammer();
         }
-        
+   
     }
+
+    private Object getjMP() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
-    
-    
+
 }

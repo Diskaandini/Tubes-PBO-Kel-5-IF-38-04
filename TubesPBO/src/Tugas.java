@@ -10,12 +10,12 @@
  */
 public class Tugas {
     private Programmer programmer;
-    private ManagerProyek Manager;
+//    private ManagerProyek Manager;
     private String judul,deskripsi;
     private boolean status;
     
-    public Tugas(Programmer pro, String judul,String deskripsi, boolean status){
-        setProgrammer(pro);
+    public Tugas( String judul,String deskripsi, boolean status){
+        
         setJudul(judul);
         setDeskripsi(deskripsi);
         setStatus(status);

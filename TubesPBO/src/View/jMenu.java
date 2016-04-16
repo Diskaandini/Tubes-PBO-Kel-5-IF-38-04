@@ -19,6 +19,7 @@ public class jMenu extends javax.swing.JFrame {
      */
     public jMenu() {
         initComponents();
+        
     }
 
     /**
@@ -30,33 +31,56 @@ public class jMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar1 = new javax.swing.JMenuBar();
-        mnProyek = new javax.swing.JMenu();
-        mnTugas = new javax.swing.JMenu();
-        mnLogout = new javax.swing.JMenu();
+        jProyek = new javax.swing.JButton();
+        jTugas = new javax.swing.JButton();
+        jProgrammer = new javax.swing.JButton();
+        jMP = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        mnProyek.setText("Proyek");
-        jMenuBar1.add(mnProyek);
+        jProyek.setText("Proyek");
 
-        mnTugas.setText("Tugas");
-        jMenuBar1.add(mnTugas);
+        jTugas.setText("Tugas");
 
-        mnLogout.setText("Logout");
-        jMenuBar1.add(mnLogout);
+        jProgrammer.setText("Programmer");
 
-        setJMenuBar(jMenuBar1);
+        jMP.setText("Manager Proyek");
+
+        jLabel1.setText("MENU OLAH DATA");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(143, 143, 143)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jProgrammer, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                            .addComponent(jTugas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jProyek, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jMP, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(153, 153, 153)
+                        .addComponent(jLabel1)))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(42, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(jMP)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jProyek)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTugas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jProgrammer)
+                .addGap(79, 79, 79))
         );
 
         pack();
@@ -66,27 +90,30 @@ public class jMenu extends javax.swing.JFrame {
      * @param args the command line arguments
      */
 
-    public JMenu getmnProyek() {
-        return mnProyek;
-    }
-
-    public JMenu getmnTugas() {
-        return mnTugas;
-    }
-
-    public JMenu getmnLogout() {
-        return mnLogout;
-    }
-
-    public JMenuBar getjMenuBar1() {
-        return jMenuBar1;
-    }
+    
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenu mnLogout;
-    private javax.swing.JMenu mnProyek;
-    private javax.swing.JMenu mnTugas;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jMP;
+    private javax.swing.JButton jProgrammer;
+    private javax.swing.JButton jProyek;
+    private javax.swing.JButton jTugas;
     // End of variables declaration//GEN-END:variables
+
+    public javax.swing.JButton getjMP() {
+        return jMP;
+    }
+
+    public javax.swing.JButton getjProgrammer() {
+        return jProgrammer;
+    }
+
+    public javax.swing.JButton getjProyek() {
+        return jProyek;
+    }
+
+    public javax.swing.JButton getjTugas() {
+        return jTugas;
+    }
 }

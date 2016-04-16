@@ -39,21 +39,31 @@ public class ControllerLogin implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         Object o = e.getSource();
         if(o.equals(login.getBtnLogin())){
-            try {
-                String usrN = login.getjUsername().getText();
-                String pass = login.getjPassword().getText();
-                String query = "select * from akun where username ='"+usrN+"';";
-                ResultSet rs = db.getData(query);
-                while(rs.next()){
-                    if(pass.equals(rs.getString("password"))){
-                        if(rs.getString("role").equals("programmer")){
-                            controllerJMenu cmenu = new controllerJMenu("programmer");
-                        }
-                    }
-                }
-            } catch (SQLException ex) {
-                Logger.getLogger(ControllerLogin.class.getName()).log(Level.SEVERE, null, ex);
+            
+            String usrN = login.getjUsername().getText();
+            String pass = login.getjPassword().getText();
+            if (usrN.equals("admin") && pass.equals("admin")){
+                login.dispose();
+                new controllerJMenu();
+                JOptionPane.showMessageDialog(null, "Anda berhasil login");
+            } else {
+                JOptionPane.showMessageDialog(null, "Anda gagal login");
             }
+//            try {
+//                String usrN = login.getjUsername().getText();
+//                String pass = login.getjPassword().getText();
+//                String query = "select * from akun where username ='"+usrN+"';";
+//                ResultSet rs = db.getData(query);
+//                while(rs.next()){
+//                    if(pass.equals(rs.getString("password"))){
+//                        if(rs.getString("role").equals("programmer")){
+//                            controllerJMenu cmenu = new controllerJMenu("programmer");
+//                        }
+//                    }
+//                }
+//            } catch (SQLException ex) {
+//                Logger.getLogger(ControllerLogin.class.getName()).log(Level.SEVERE, null, ex);
+//            }
         }
     }
     

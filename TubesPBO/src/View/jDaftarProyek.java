@@ -40,13 +40,14 @@ public class jDaftarProyek extends javax.swing.JFrame {
 
         jTableProyek.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {"1111", "abcd", "blalablaa", "Oldi"},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null}
             },
             new String [] {
-                "ID Proyej", "Nama Proyek", "Deskripsi", "Programmer"
+                "ID Proyek", "Nama Proyek", "Deskripsi", "Programmer"
             }
         ));
         jScrollPane1.setViewportView(jTableProyek);

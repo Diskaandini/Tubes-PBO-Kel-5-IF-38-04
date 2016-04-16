@@ -7,14 +7,14 @@ package View;
 
 /**
  *
- * @author USER
+ * @author VELIA
  */
-public class jDaftarTugas extends javax.swing.JFrame {
+public class MenuManagerProyek extends javax.swing.JFrame {
 
     /**
-     * Creates new form jDaftarTugas
+     * Creates new form MenuManagerProyek
      */
-    public jDaftarTugas() {
+    public MenuManagerProyek() {
         initComponents();
     }
 
@@ -36,17 +36,18 @@ public class jDaftarTugas extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Daftar Tugas");
+        jLabel1.setText("Daftar Manager Proyek");
 
         jTableProyek.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {"123", "Diska Andini", "andinidiska@gmail.com", "abcd"},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "ID Tugas", "ID Proyek", "Nama ", "Deskripsi", "Programmer", "Status"
+                "ID Manager Proyek", "Nama", "Email", "Proyek"
             }
         ));
         jScrollPane1.setViewportView(jTableProyek);
@@ -131,20 +132,20 @@ public class jDaftarTugas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(jDaftarTugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuManagerProyek.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(jDaftarTugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuManagerProyek.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(jDaftarTugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuManagerProyek.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(jDaftarTugas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuManagerProyek.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new jDaftarTugas().setVisible(true);
+                new MenuManagerProyek().setVisible(true);
             }
         });
     }

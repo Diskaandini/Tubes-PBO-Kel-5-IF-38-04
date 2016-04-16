@@ -31,7 +31,7 @@ public class jUpdateTugas extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         txtDeskripsi = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
-        listProgrammer = new javax.swing.JList<>();
+        listProgrammer = new javax.swing.JList<String>();
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -65,7 +65,7 @@ public class jUpdateTugas extends javax.swing.JFrame {
 
         btnUpdateProyek.setText("Update");
 
-        jLabel6.setText("Staus");
+        jLabel6.setText("Status");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
